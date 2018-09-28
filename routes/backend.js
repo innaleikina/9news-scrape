@@ -5,6 +5,10 @@ var cheerio = require("cheerio");
 
 module.exports = function (app) {
 
+
+    //=========================
+    //SCRAPE ROUTE
+    //=========================
     // A GET route for scraping the 9 news website
     app.get("/scrape", function (req, res) {
         // First, we grab the body of the html with request
@@ -36,15 +40,40 @@ module.exports = function (app) {
                         return res.json(err);
                     });
             });
-
             // If we were able to successfully scrape and save an Article, send a message to the client
             res.send("Scrape Complete");
         });
     });
 
+    //=========================
+    //DELETE ROUTE
+    //=========================
     app.post("/clear", function () {
         db.Article.deleteMany({}).then(function () {
             console.log("deleted");
         })
     })
+
+    //=========================
+    //SAVE TO FAVORITES ROUTE
+    //=========================
+    // Mark a book as having been read
+    app.get("/markread/:id", function (req, res) {
+        var query = {
+            _id: req.params.id
+        };
+        var update = {
+            saved: true
+        };
+        var options = {
+            new: true
+        };
+        db.Article.findOneAndUpdate(query, update, options, function (err, doc) {
+            if (err) {
+                console.log(err)
+            } else {
+                console.log(doc.saved);
+            }
+        });
+    });
 };
