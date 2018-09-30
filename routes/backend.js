@@ -1,4 +1,4 @@
-var db = require("../models");
+var db = require(__dirname + "../models");
 var axios = require("axios");
 var cheerio = require("cheerio");
 
