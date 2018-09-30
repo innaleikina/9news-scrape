@@ -1,10 +1,10 @@
-// var path = require("path");
+var path = require("path");
 
 
 
 // var db = require("../models");
 
-var db =  require(path.join( __dirname + '/../models'));
+var db =  require(path.join( __dirname + '/../app/models'));
 
 var axios = require("axios");
 var cheerio = require("cheerio");

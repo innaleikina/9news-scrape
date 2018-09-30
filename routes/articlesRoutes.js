@@ -1,4 +1,11 @@
-var db = require("../models");
+// var db = require("../models");
+var path = require("path");
+
+
+
+// var db = require("../models");
+
+var db =  require(path.join( __dirname + '/../app/models'));
 
 module.exports = function (app) {
 //=========================
