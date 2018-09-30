@@ -39,7 +39,25 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
 // Connect to the Mongo DB
-mongoose.connect("mongodb://localhost/homeworkScraper", { useNewUrlParser: true });
+
+var databaseUri = "mongodb://localhost/homeworkScraper";
+
+if(process.env.MONGODB_URI){
+  mongoose.connect(process.env.MONGODB_UTI)
+} else {
+  mongoose.connect(databaseUri);
+}
+
+// mongoose.connect("mongodb://localhost/homeworkScraper", { useNewUrlParser: true });
+var db = mongoose.connection;
+
+db.on('error', function(err){
+  console.log("Mongoose err", err)
+});
+
+db.once('open', function(){
+  console.log("Mongoose connection successful")
+})
 
 // Routes
 require("./routes/frontend")(app);
