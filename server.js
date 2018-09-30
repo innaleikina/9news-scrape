@@ -32,24 +32,13 @@ app.use(express.static("public"));
 
 // Connect to the Mongo DB
 
-var databaseUri = "mongodb://localhost/homeworkScraper";
+// If deployed, use the deployed database. Otherwise use the local mongoHeadlines database
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/homeworkScraper";
 
-if(process.env.MONGODB_URI){
-  mongoose.connect(process.env.MONGODB_URI , { useNewUrlParser: true })
-} else {
-  mongoose.connect(databaseUri , { useNewUrlParser: true });
-}
-
-// mongoose.connect("mongodb://localhost/homeworkScraper", { useNewUrlParser: true });
-var db = mongoose.connection;
-
-db.on('error', function(err){
-  console.log("Mongoose err", err)
-});
-
-db.once('open', function(){
-  console.log("Mongoose connection successful")
-})
+// Set mongoose to leverage built in JavaScript ES6 Promises
+// Connect to the Mongo DB
+mongoose.Promise = Promise;
+mongoose.connect(MONGODB_URI);
 
 // Routes
 require("./routes/frontend")(app);
