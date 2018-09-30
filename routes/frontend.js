@@ -1,4 +1,4 @@
-var db = require("../models");
+// var db = require("../models");
 
 module.exports = function (app) {
   //renders index.handlebars on the home page
