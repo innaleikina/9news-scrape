@@ -2,7 +2,7 @@ var express = require("express");
 var bodyParser = require("body-parser");
 var logger = require("morgan");
 var mongoose = require("mongoose");
-var path = require("path");
+// var path = require("path");
 var exphbs = require("express-handlebars");
 
 
@@ -12,8 +12,8 @@ var PORT = 3000;
 var app = express();
 
 // Configure middleware
-// view engine setup
-app.set('views', path.join(__dirname, 'views'));
+// // view engine setup
+// app.set('views', path.join(__dirname, 'views'));
 // Handlebars
 app.engine(
   "handlebars",
@@ -35,9 +35,9 @@ app.use(express.static("public"));
 var databaseUri = "mongodb://localhost/homeworkScraper";
 
 if(process.env.MONGODB_URI){
-  mongoose.connect(process.env.MONGODB_URI)
+  mongoose.connect(process.env.MONGODB_URI , { useNewUrlParser: true })
 } else {
-  mongoose.connect(databaseUri);
+  mongoose.connect(databaseUri , { useNewUrlParser: true });
 }
 
 // mongoose.connect("mongodb://localhost/homeworkScraper", { useNewUrlParser: true });
