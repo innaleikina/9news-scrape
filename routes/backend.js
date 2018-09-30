@@ -1,13 +1,11 @@
 // var path = require("path");
-
-
-
 var db = require("../models");
 
 // var db =  require(path.join( __dirname + '/../models'));
 
 var axios = require("axios");
 var cheerio = require("cheerio");
+var request = require("request");
 
 
 module.exports = function (app) {
@@ -22,9 +20,9 @@ module.exports = function (app) {
         // console.log("db is " + db);
         // console.log(path.join(__dirname + "/../"));
         // First, we grab the body of the html with request
-        axios.get("https://www.9news.com/local/").then(function (response) {
+        request("https://www.9news.com/local/",function (error,response,html) {
             // Then, we load that into cheerio and save it to $ for a shorthand selector
-            var $ = cheerio.load(response.data);
+            var $ = cheerio.load(html);
 
             // Now, we grab every headline within an article tag, and do the following:
             $(".text-only-headline-list__headline").each(function (i, element) {
