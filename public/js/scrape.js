@@ -1,4 +1,5 @@
 $("#scrape").on("click", function () {
+  console.log("scrape clicked")
   $.ajax("/scrape", {
       type: "GET",
     }).then(function () {

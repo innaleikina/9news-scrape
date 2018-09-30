@@ -1,8 +1,30 @@
+
+<div class="module">
+
+</div>
+
 <div id="saved-wrap">
     <h2> Favorite Articles </h2>
-    <div class="module">
-       
+    {{#each articles}}
+    <div class="one-article saved-article">
+        <div class="title-btn-wrap">
+            <a target="_blank" href="{{this.link}}">
+                <p> {{this.title}}</p>
+            </a>
+            <button class="add-note" data-id={{this._id}}> add note </button>
+        </div>
+        <div class="notes-wrap">
+            {{#each this.note}}
+            <div class="one-note">
+                {{this.body}}
+            </div>
+            {{/each}}
+        </div>
+
     </div>
+</div>
+{{/each}}
+
 
 
 

@@ -56,13 +56,14 @@ li {
     padding: 10px;
     margin: 20px;
     border-radius: 5px;
-
 }
 
 .saved-article {
     width: 90%;
     display: flex;
     justify-content: space-around;
+    flex-direction:row;
+
 }
 
 .title-btn-wrap {
@@ -72,17 +73,23 @@ li {
 }
 
 .module {
-    border: 1px red solid;
+    border: 2px skyblue solid;
     width: 400px;
     display: none;
     position: fixed;
-    margin: 40px auto;
+    margin: 0px auto;
+    margin-top: -50px;
     left: 50%;
     height: 300px;
     margin-left: -200px;
     background-color: white;
 }
 
+
+.close-module{
+    color:black 3px;
+    border:2px black solid;
+}
 form {
     display: flex;
     flex-direction: column;
@@ -99,6 +106,28 @@ form {
     text-align: center;
 }
 
-.text-area{
-    height:150px;
+.text-area {
+    height: 150px;
+}
+
+.notes-wrap {
+    /* border: 1px skyblue solid; */
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+h2 {
+    margin-left: 2%;
+}
+
+.add-note {
+    width: 100px;
+    border-radius: 5px;
+}
+
+.one-note {
+    border-bottom: 1px skyblue solid;
+    padding:5px 0;
 }
