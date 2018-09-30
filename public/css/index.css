@@ -58,3 +58,18 @@ border-radius:5px;
     border-radius:5px;
 
 }
+
+.saved-article{
+    width:40%;
+}
+
+.module{
+    border:1px red solid;
+    width:400px;
+    display:none;
+    position:fixed;
+    margin:40px auto;
+    left: 50%;
+    height:300px;
+    margin-left: -200px;
+}
