@@ -1,4 +1,11 @@
-var db = require(__dirname + "../models");
+var path = require("path");
+
+
+
+// var db = require("../models");
+
+var db =  require(path.join( __dirname + '/../models'));
+
 var axios = require("axios");
 var cheerio = require("cheerio");
 
@@ -11,6 +18,8 @@ module.exports = function (app) {
     //=========================
     // A GET route for scraping the 9 news website
     app.get("/scrape", function (req, res) {
+        // console.log("db1 is " + db1);
+        console.log("db is " + db);
         // First, we grab the body of the html with request
         axios.get("https://www.9news.com/local/").then(function (response) {
             // Then, we load that into cheerio and save it to $ for a shorthand selector
