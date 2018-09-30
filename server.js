@@ -44,6 +44,8 @@ mongoose.connect("mongodb://localhost/homeworkScraper", { useNewUrlParser: true 
 // Routes
 require("./routes/frontend")(app);
 require("./routes/backend")(app);
+require("./routes/articlesRoutes")(app);
+
 
 
 // Route for grabbing a specific Article by id, populate it with it's note

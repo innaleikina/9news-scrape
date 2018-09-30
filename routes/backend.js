@@ -50,7 +50,10 @@ module.exports = function (app) {
     //=========================
     app.post("/clear", function () {
         db.Article.deleteMany({}).then(function () {
-            console.log("deleted");
+            console.log("article deleted");
+        });
+        db.Note.deleteMany({}).then(function () {
+            console.log("note deleted");
         })
     })
 
@@ -58,7 +61,7 @@ module.exports = function (app) {
     //SAVE TO FAVORITES ROUTE
     //=========================
     // Mark a book as having been read
-    app.get("/markread/:id", function (req, res) {
+    app.get("/markFavorite/:id", function (req, res) {
         var query = {
             _id: req.params.id
         };

@@ -1,75 +1,104 @@
-html{
-  font-family:"Helvetica";
+html {
+    font-family: "Helvetica";
 }
 
-.nav{
-    display:flex;
-    flex-direction:row;
+.nav {
+    display: flex;
+    flex-direction: row;
     justify-content: space-between;
-    padding-top:10px;
-    padding-bottom:10px;
-    border-bottom:1px black solid;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px black solid;
 }
 
 
-h1{
-    color:black;
-    font-size:22px;
-    margin-bottom:auto;
-    margin-top:auto;
-    margin-left:20px;
+h1 {
+    color: black;
+    font-size: 22px;
+    margin-bottom: auto;
+    margin-top: auto;
+    margin-left: 20px;
 }
 
-ul{
+ul {
     list-style: none;
-    display:flex;
-    flex-direction:row;
+    display: flex;
+    flex-direction: row;
     /* border:1px red solid; */
-    width:500px;
+    width: 500px;
     justify-content: space-around;
-    margin-right:20px;
-    padding:10px;
+    margin-right: 20px;
+    padding: 10px;
 }
 
-.button{
-    padding:10px;
-    border:1px skyblue solid;
-    border-radius:5px;
+.button {
+    padding: 10px;
+    border: 1px skyblue solid;
+    border-radius: 5px;
 }
 
-li{
-    margin:auto;
+li {
+    margin: auto;
 }
 
-#articles-wrap{
-width:400px;
-margin:0 auto;
-border:1px black solid;
-margin-top: 20px;
-/* height:100vh; */
-margin-bottom:20px;
-border-radius:5px;
+#articles-wrap {
+    width: 400px;
+    margin: 0 auto;
+    border: 1px black solid;
+    margin-top: 20px;
+    /* height:100vh; */
+    margin-bottom: 20px;
+    border-radius: 5px;
 }
 
-.one-article{
-    border:1px skyblue solid;
-    padding:10px;
-    margin:20px;
-    border-radius:5px;
+.one-article {
+    border: 1px skyblue solid;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 5px;
 
 }
 
-.saved-article{
-    width:40%;
+.saved-article {
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
 }
 
-.module{
-    border:1px red solid;
-    width:400px;
-    display:none;
-    position:fixed;
-    margin:40px auto;
+.title-btn-wrap {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+
+.module {
+    border: 1px red solid;
+    width: 400px;
+    display: none;
+    position: fixed;
+    margin: 40px auto;
     left: 50%;
-    height:300px;
+    height: 300px;
     margin-left: -200px;
+    background-color: white;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.submit {
+    width: 200px;
+    margin: 20px auto;
+}
+
+.module-id-p {
+    text-align: center;
+}
+
+.text-area{
+    height:150px;
 }

@@ -4,7 +4,7 @@ console.log($(this).attr("data-id"));
 var thisId = $(this).attr("data-id");
   $.ajax({
     type: "GET",
-    url: "/markread/" + thisId
+    url: "/markFavorite/" + thisId
   });
   $(this).parents(".one-article").remove();
 }
