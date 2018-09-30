@@ -12,7 +12,7 @@ var exphbs = require("express-handlebars");
 // var cheerio = require("cheerio");
 
 // Require all models
-var db = require("./models");
+// var db = require("./models");
 
 var PORT = 3000;
 
@@ -43,7 +43,7 @@ app.use(express.static("public"));
 var databaseUri = "mongodb://localhost/homeworkScraper";
 
 if(process.env.MONGODB_URI){
-  mongoose.connect(process.env.MONGODB_UTI)
+  mongoose.connect(process.env.MONGODB_URI)
 } else {
   mongoose.connect(databaseUri);
 }
