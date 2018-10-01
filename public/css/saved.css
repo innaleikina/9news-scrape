@@ -37,3 +37,9 @@ h2 {
     border-bottom: 1px skyblue solid;
     padding:5px 0;
 }
+
+.btn-wrap-saved{
+    display:flex;
+    width:240px;
+    justify-content: space-between;
+}

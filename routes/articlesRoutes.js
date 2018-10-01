@@ -19,6 +19,52 @@ module.exports = function (app) {
   });
 
 
+  //=========================
+    //SAVE TO FAVORITES ROUTE
+    //=========================
+    // Mark a book as having been read
+    app.get("/markFavorite/:id", function (req, res) {
+      var query = {
+          _id: req.params.id
+      };
+      var update = {
+          saved: true
+      };
+      var options = {
+          new: true
+      };
+      db.Article.findOneAndUpdate(query, update, options, function (err, doc) {
+          if (err) {
+              console.log(err)
+          } else {
+              console.log(doc.saved);
+          }
+      });
+  });
+
+  //=========================
+    //DELETE FROM FAVORITES ROUTE
+    //=========================
+    // Mark a book as having been read
+    app.get("/removeFavorite/:id", function (req, res) {
+      var query = {
+          _id: req.params.id
+      };
+      var update = {
+          saved: false
+      };
+      var options = {
+          new: true
+      };
+      db.Article.findOneAndUpdate(query, update, options, function (err, doc) {
+          if (err) {
+              console.log(err)
+          } else {
+              console.log(doc.saved);
+          }
+      });
+  });
+
     //=========================
   //FAVORITES ROUTE
   //=========================
@@ -59,6 +105,8 @@ module.exports = function (app) {
         res.json(err);
       });
   });
+
+  
 
 
   //=========================
