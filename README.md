@@ -2,7 +2,9 @@
 
 9 News scraper gets article titles and links from the Denver 9 News website on a button click. After the article titles are displayed the user can save any of the articles to favorites and add notes to individual articles. All the data is persistent.
 
-## Visit the deployed version of [Chewzy](https://ancient-sierra-32891.herokuapp.com)
+## Visit the deployed version of [9 News Scrape](https://ancient-sierra-32891.herokuapp.com)
+
+![homepage](chewzy_video.gif)
 
 ## Getting Started
 to install locally run this command in your terminal
