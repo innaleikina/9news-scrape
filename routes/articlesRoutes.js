@@ -84,17 +84,18 @@ module.exports = function (app) {
 
 
   //=========================
-  //LOAD ONLY ARTICLES THAT AREN'T FAVORITES ROUTE
+  //LOAD ONLY ARTICLES THAT AREN'T FAVORITES ON HOME PAGE
   //=========================
   //retrieve articles from the database to make my own API
-  app.get("/noneFaveArticles", function (req, res) {
+  app.get("/", function (req, res) {
     // Grab every document in the Articles collection
     db.Article.find({
       saved:false
     })
       .then(function (dbArticle) {
-        // If we were able to successfully find Articles, send them back to the client
-        res.json(dbArticle);
+        res.render("index", {
+          articles: dbArticle
+        })
       })
       .catch(function (err) {
         // If an error occurred, send it to the client

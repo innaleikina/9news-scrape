@@ -41,7 +41,6 @@ mongoose.Promise = Promise;
 mongoose.connect(MONGODB_URI);
 
 // Routes
-require("./routes/frontend")(app);
 require("./routes/backend")(app);
 require("./routes/articlesRoutes")(app);
 

@@ -1,0 +1,53 @@
+.module {
+    border: 2px skyblue solid;
+    width: 400px;
+    display: none;
+    position: fixed;
+    margin: 0px auto;
+    margin-top: -50px;
+    left: 50%;
+    height: 300px;
+    margin-left: -200px;
+    background-color: white;
+    box-shadow:3px 3px 3px rgba(82,82,82,.8);
+}
+
+
+.close-module{
+    color:black 3px;
+    border:2px black solid;
+    box-shadow:2px 2px 2px rgba(82,82,82,0.8);
+}
+
+.close-module:hover{
+    border-color:skyblue;
+    background-color: skyblue;
+}
+
+.close-module:focus{
+    outline:0;
+}
+
+.close-module:active{
+  box-shadow:none;
+  top:2px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.submit {
+    width: 200px;
+    margin: 20px auto;
+}
+
+.module-id-p {
+    text-align: center;
+}
+
+.text-area {
+    height: 150px;
+}

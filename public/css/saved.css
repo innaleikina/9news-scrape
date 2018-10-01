@@ -1,0 +1,39 @@
+
+
+
+.saved-article {
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction:row;
+    margin:20px auto;
+}
+
+.title-btn-wrap {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+
+
+.notes-wrap {
+    /* border: 1px skyblue solid; */
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+h2 {
+    margin-left: 2%;
+}
+
+.add-note {
+    width: 100px;
+    border-radius: 5px;
+}
+
+.one-note {
+    border-bottom: 1px skyblue solid;
+    padding:5px 0;
+}

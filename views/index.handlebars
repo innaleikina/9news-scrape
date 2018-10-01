@@ -1,5 +1,11 @@
-
 <div id="articles-wrap">
-
+    {{#each articles}}
+    <div class="one-article">
+        <a target="_blank" href={{this.link}}>
+            <p>{{this.title}}</p>
+        </a>
+        <button class="fave-btn all-btn" data-id={{this._id}}> save to favorites
+         </button>
+    </div>
+    {{/each}}
 </div>
-
