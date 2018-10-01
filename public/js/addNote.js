@@ -7,7 +7,7 @@ function showModule(event) {
     // $(".module-id").append($(this).attr("data-id"))
     $(".module").css('display', "block");
     //creates a module labeled with the correct id on click of a button
-    $(".module").append('<button class="close-module"> x </button> <p class="module-id-p"> id <span class="module-id">' + $(this).attr("data-id") + '</span> </p> <form class="form"> <textarea class="text-area" name="note" id="note" form="form"> Enter note here...</textarea> <input class="submit" type="submit" data-id=' + $(this).attr("data-id") + '> </form>');
+    $(".module").append('<button class="close-module"> x </button> <p class="module-id-p"> id <span class="module-id">' + $(this).attr("data-id") + '</span> </p> <form class="form"> <textarea class="text-area" name="note" id="note" form="form"> Enter note here...</textarea> <input class="submit all-btn" type="submit" data-id=' + $(this).attr("data-id") + '> </form>');
 }
 
 
