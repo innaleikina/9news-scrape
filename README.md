@@ -4,7 +4,7 @@
 
 ## Visit the deployed version of [9 News Scrape](https://ancient-sierra-32891.herokuapp.com)
 
-![homepage](scrape.gif)
+![homepage](scraper.gif)
 
 ## Getting Started
 to install locally run this command in your terminal
